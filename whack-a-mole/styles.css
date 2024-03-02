@@ -1,0 +1,83 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffdb4d;
+}
+
+#score {
+    font-size: 24px;
+}
+
+#timer {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#gameBoard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hole {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.hole img {
+    position: absolute;
+    top: 0;
+    /* Adjusted to start at the top of the hole */
+    left: 0;
+    /* Adjusted to start at the left of the hole */
+    width: 100%;
+    /* Set image width to 100% of the hole */
+    height: 100%;
+    /* Set image height to 100% of the hole */
+    transition: top 0.5s ease, left 0.5s ease;
+}
+
+#finalMessage {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.mole {
+    animation: moleAnimation 1s infinite alternate;
+    /* Apply animation to moles */
+}
+
+@keyframes moleAnimation {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 50%;
+        /* Adjust as needed */
+    }
+}
